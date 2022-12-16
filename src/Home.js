@@ -2,8 +2,8 @@ import React from 'react';
 import ImageCarousel from './ImageCarousel';
 import ImageRow from './ImageRow';
 import city from './city-1.jpg';
-import bear from './images/bear.jpeg'
-import lava from './images/lava.jpeg'
+import bear from './bear.jpeg'
+import lava from './lava.jpeg'
 const Home = () => (
   <div style={{paddingLeft:'5%',paddingRight:'5%'}}>
     <h1 style={{padding: '1%',color:'white'}}>Welcome to my web page!</h1>

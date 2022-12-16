@@ -6,7 +6,7 @@ export default function MatrixBackground (){
     useEffect(() => {
       const interval = setInterval(() => {
         setAnimationIndex((animationIndex + .01) % 2);
-      }, 20);
+      }, 200);
   
       return () => clearInterval(interval);
     });

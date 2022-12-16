@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# chatGPTpersonalSite
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+I also used ChatGpt to help create some of the code. in particular the matrix animation in the background 
+DEV url:
+https://main.d3onccz8new8zg.amplifyapp.com/
+
 
 ## Available Scripts
 

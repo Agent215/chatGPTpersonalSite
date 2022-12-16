@@ -6,6 +6,7 @@ import {
     Route,
 } from "react-router-dom";
 import About from './About';
+import Blog from './Blog';
 import ContactForm from './ContactForm';
 import Home from './Home';
 
@@ -19,7 +20,7 @@ export default function MyNavbar() {
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
-                        <Nav.Link href="#blog">Blog</Nav.Link>
+                        <Nav.Link href="/blog">Blog</Nav.Link>
                         <Nav.Link href="/contact-form">Contact</Nav.Link>
                         {/* <NavDropdown title="Contact" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#contact-form">Contact Form</NavDropdown.Item>
@@ -32,7 +33,9 @@ export default function MyNavbar() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/contact-form' element={<ContactForm />} />
-                <Route path='about' element={<About />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/blog' element={<Blog />} /> <Route path='about' element={<About />} />
+
             </Routes>
         </div>
 

@@ -1,76 +1,70 @@
-import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import axios from 'axios';
+import React, { useState, useRef } from "react";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { useForm, ValidationError } from '@formspree/react';
+
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null }
-  });
+    const [status, setStatus] = useState("Submit");
+    const [state, handleSubmit] = useForm("mnqyaqgl");
+    const [errorMessege, setErrorMessege] = useState(null);
+    const formRef = useRef(null);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setStatus({ submitted: false, submitting: true, info: { error: false, msg: null } });
-    axios({
-      method: 'POST',
-      url: 'https://example.com/send-email',
-      data: { name, email, message }
-    }).then(() => {
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg: 'Email sent successfully!' }
-      });
-      resetForm();
-    })
-      .catch(() => {
-        setStatus({
-          submitted: true,
-          submitting: false,
-          info: { error: true, msg: 'Error submitting the form. Please try again.' }
-        });
-      });
-  };
+    if (state.succeeded) {
+        return (
+            <div style = {{padding: '30px'  , textAlign: 'center' , color:'white'}}>
+                <h1 >Thank you for your interest. I will be in touch soon.</h1>
+            </div>);
+    }
 
-  const resetForm = () => {
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
+    return (
+        <div style={{ padding: '30px' }}>
 
-  return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group>
-        <Form.Label htmlFor="name">Name</Form.Label>
-        <Form.Control id="name" type="text" value={name} onChange={e => setName(e.target.value)} />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label htmlFor="email">Email</Form.Label>
-        <Form.Control id="email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label htmlFor="message">Message</Form.Label>
-        <Form.Control id="message" as="textarea" rows="3" value={message} onChange={e => setMessage(e.target.value)} />
-      </Form.Group>
-      <Button variant="primary" type="submit" disabled={status.submitting}>
-        {!status.submitting
-          ? !status.submitted
-            ? 'Submit'
-            : 'Submitted'
-          : 'Submitting...'}
-      </Button>
-      {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
-      )}
-      {!status.info.error && status.info.msg && (
-        <div className="success">{status.info.msg}</div>
-      )}
-    </Form>
-  );
+            <Form
+                onSubmit={handleSubmit}
+                id="contactForm"
+                className="form"
+                ref={formRef}
+            >
+                <Form.Group className="mb-3" controlId="name">
+                    <Form.Label style={{color:'white'}}>Name</Form.Label>
+                    <Form.Control type="string" placeholder="Name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="email">
+                    <Form.Label   style={{color:'white'}} htmlFor="email">Email address</Form.Label>
+                    <Form.Control  id="email"
+                        type="email"
+                        name="email" placeholder="Enter email" />
+                        <Form.Control type="hidden" id="email" name="_replyto" ></Form.Control>
+                    <Form.Text   style={{color:'white'}} className="text-muted">
+                        We'll never share your email with anyone else.
+                    </Form.Text>
+                    <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                    />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="messege">
+                    <Form.Label  style={{color:'white'}}>Message</Form.Label>
+                    <Form.Control id="message"
+                        name="message" as="textarea" rows={3} />
+                        <Form.Control type="hidden" name="_subject" id="email-subject" value="Brahms web site"></Form.Control>
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    {status}
+                </Button>
+            </Form>
+            {errorMessege == null ? <p></p> :
+                <p style={{ paddingTop: "10px" }}>
+                    <b style={{ color: "red" }}>
+                        {errorMessege}
+                    </b>
+                </p>
+            }
+        </div>
+
+    );
 };
 
 export default ContactForm;

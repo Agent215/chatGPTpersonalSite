@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-brahmsapp-dev-202039-authRole",
+      "UnauthRoleArn": "arn:aws:iam::124229768008:role/amplify-brahmsapp-dev-202039-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::124229768008:role/amplify-brahmsapp-dev-202039-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-brahmsapp-dev-202039-deployment",
+      "UnauthRoleName": "amplify-brahmsapp-dev-202039-unauthRole",
+      "StackName": "amplify-brahmsapp-dev-202039",
+      "StackId": "arn:aws:cloudformation:us-east-1:124229768008:stack/amplify-brahmsapp-dev-202039/daa4ad50-7cdf-11ed-9f0a-0ae3810f0c5b",
+      "AmplifyAppId": "d2j23ftgwm6cww"
+    }
+  }
+}

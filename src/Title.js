@@ -2,8 +2,9 @@ import React from 'react';
 
 function Title() {
   return (
-    <div className="title-container" style={styles.titleContainer}>
-      <h1 className="title" style={styles.title}>BRAHM SCHULTZ</h1>
+    <div  style={styles.titleContainer}>
+      <h1 style={styles.title}> ⚗️ BRAHM SCHULTZ 👽</h1>
+      
     </div>
   );
 }
@@ -13,7 +14,7 @@ export default Title;
 const styles = {
   title: {
     fontSize: 55,
-    fontFamily: 'Frijole, cursive',
+    fontFamily: 'Luckiest Guy, cursive',
     textAlign: 'center',
     background: 'linear-gradient(to bottom, white, pink, red)',
     WebkitBackgroundClip: 'text',

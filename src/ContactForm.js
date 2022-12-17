@@ -31,13 +31,13 @@ const ContactForm = () => {
                     <Form.Control type="string" placeholder="Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="email">
-                    <Form.Label   style={{color:'white'}} htmlFor="email">Email address</Form.Label>
+                    <Form.Label   style={{color:'white'}} htmlFor="email">Email address📧</Form.Label>
                     <Form.Control  id="email"
                         type="email"
                         name="email" placeholder="Enter email" />
                         <Form.Control type="hidden" id="email" name="_replyto" ></Form.Control>
                     <Form.Text   style={{color:'white'}} className="text-muted">
-                        We'll never share your email with anyone else.
+                        We'll never share your email with anyone else 😉
                     </Form.Text>
                     <ValidationError
                         prefix="Email"
@@ -46,7 +46,7 @@ const ContactForm = () => {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="messege">
-                    <Form.Label  style={{color:'white'}}>Message</Form.Label>
+                    <Form.Label  style={{color:'white'}}>Message 📝</Form.Label>
                     <Form.Control id="message"
                         name="message" as="textarea" rows={3} />
                         <Form.Control type="hidden" name="_subject" id="email-subject" value="Brahms web site"></Form.Control>

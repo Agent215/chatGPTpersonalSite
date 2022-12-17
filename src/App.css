@@ -1,27 +1,80 @@
-/* .App {
-  text-align: center;
+
+/* Image Gallery styles */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
+.image-thumbnail {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 2px;
+  cursor: pointer;
+}
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .image-thumbnail {
+    flex: 0 0 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    max-width: 100%;
+  }
+}
+
+/* prepare the selectors to add a stroke to */
+.stroke-single,
+.stroke-double {
+  position: relative;
+  background: transparent;
+  z-index: 0;
+  color:white;
+  font-size: 60px;
+  font-family: 'Oswald';
+  margin: 20px 100px ;
+}
+/* add a single stroke */
+.stroke-single:before,
+.stroke-double:before {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: 0.11em red; 
+  
+  left: 0;
+  z-index: -1;
+}
+/* add a double stroke */
+.stroke-double:after {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: 0.25em white;
+  left: 0;
+  z-index: -2;
+}
+
+.expanded {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.expanded-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+  cursor: pointer;
+}
 
-
-
+.expanded-image-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+}

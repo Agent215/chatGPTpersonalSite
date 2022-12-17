@@ -10,7 +10,7 @@ const Blog = () => {
             <Accordion.Header>12/15/2022</Accordion.Header>
             <Accordion.Body>
             <Card> 
-                    <Card.Header>Blog</Card.Header>
+                    <Card.Header>  👏 😎 </Card.Header>
                     <Card.Body>
                         <h5>First Entry</h5>
                         <p>
@@ -31,7 +31,7 @@ const Blog = () => {
             <Accordion.Header>12/16/2022</Accordion.Header>
             <Accordion.Body>
             <Card> 
-                    <Card.Header>Blog</Card.Header>
+                    <Card.Header> 🤓 👹  </Card.Header>
                     <Card.Body>
                         <h5>Messing with Font</h5>
                         <p>

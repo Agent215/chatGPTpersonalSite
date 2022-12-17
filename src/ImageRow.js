@@ -63,6 +63,7 @@ export default function ImageRow({ images }) {
       {images.map((image, index) => (
         <React.Fragment key={index}>
           <Image
+            style={{padding:'4px'}}
             src={image.src}
             alt={image.alt}
             // Add the "expanded" class to the image if it is expanded

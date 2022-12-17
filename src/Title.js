@@ -12,7 +12,7 @@ export default Title;
 
 const styles = {
   title: {
-    fontSize: 72,
+    fontSize: 55,
     fontFamily: 'Frijole, cursive',
     textAlign: 'center',
     background: 'linear-gradient(to bottom, white, pink, red)',
@@ -21,6 +21,7 @@ const styles = {
     marginTop: '15%',
     marginBottom: '15%',
     WebkitTextStroke: '.1vw black',
+    maxWitdh: '100%'
 
   },
 };

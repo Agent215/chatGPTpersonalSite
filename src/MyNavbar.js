@@ -5,10 +5,10 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import About from './About';
-import Blog from './Blog';
-import ContactForm from './ContactForm';
-import Home from './Home';
+import About from './Sections/About';
+import Blog from './Components/Blog';
+import ContactForm from './Components/ContactForm';
+import Home from './Sections/Home';
 
 export default function MyNavbar() {
     return (

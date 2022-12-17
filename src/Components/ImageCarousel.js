@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
-import city from './images/city-1.jpg';
+import city from './../images/city-1.jpg';
 
 const ImageCarousel = () => {
   const [index, setIndex] = useState(0);

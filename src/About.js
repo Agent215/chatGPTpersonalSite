@@ -6,8 +6,8 @@ const About = () => {
     <Container>
       <Row>
         <Col>
-          <h2 className="text-white">About the Website</h2>
-          <p className="text-white">
+          <h2 className="text-white" style ={{textAlign:'center'}}>About the Website</h2>
+          <p className="text-white"  style ={{textAlign:'center'}}>
             This website was built using AI-generated code and art. The code was created using a large language model trained by OpenAI, and the art was generated using a deep learning model that specializes in creating images.
           </p>
         </Col>

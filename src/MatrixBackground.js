@@ -12,7 +12,7 @@ export default function MatrixBackground (){
     });
   
     const keywords = ['if', 'else', 'for', 'while', 'do', 'switch', 'int', 'double', 'string' , 'boolean',];
-    const operators = ['+', '-', '*', '/', '%', '&&', '||', '!', '=' , '{', '}', 'INFO:', '\n\n', '\n' , '01001'];
+    const operators = ['+', '-', '*', '/', '%', '&&', '||', '!', '=' , '{', '}', 'INFO:', '\n\n', '\n' , '01001' ,'音','樂'];
   
     return (
       <div

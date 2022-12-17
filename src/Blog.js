@@ -9,7 +9,7 @@ const Blog = () => {
         <ListGroupItem>
           <h5>12/15/2022</h5>
           <p>
-            I, Brahm Schultz, created this website with the help of a powerful AI assistant. I asked the assistant a few questions, such as how to create a React blog component using React Bootstrap, and it provided me with clear, concise answers.
+            I created this website with the help of a powerful AI assistant. I asked the assistant a few questions, such as how to create a React blog component using React Bootstrap, and it provided me with clear, concise answers.
           </p>
           <p>
             I was impressed by the assistant's knowledge and ability to generate human-like text on the fly. It's truly amazing what AI can do these days!

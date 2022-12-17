@@ -14,7 +14,7 @@ export default function MyNavbar() {
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{ padding: "0", margin: '0' }}>
-                <Navbar.Brand href="/">Brahm Schultz</Navbar.Brand>
+                {/* <Navbar.Brand href="/">Brahm Schultz</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">

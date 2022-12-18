@@ -3,6 +3,7 @@ import MyNavbar from './MyNavbar';
 import { Container } from 'react-bootstrap';
 import MatrixBackground from './Components/MatrixBackground';
 import ImageCarousel from './Components/ImageCarousel';
+import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App">
@@ -10,6 +11,7 @@ function App() {
       <Container  >
         <MatrixBackground />
       </Container>
+      <Footer />
     </div>
   );
 }

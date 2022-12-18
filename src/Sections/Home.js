@@ -42,7 +42,7 @@ const images = [
   ];
 
 const Home = () => (
-  <div style={{paddingLeft:'5%',paddingRight:'5%'}}>
+  <div style={{paddingLeft:'5%',paddingRight:'5%', paddingBottom:'5%'}}>
     <Title/>
     {/* <PongGame/> */}
     {/* <TicTacToe/> */}

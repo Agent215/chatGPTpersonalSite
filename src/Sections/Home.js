@@ -4,8 +4,9 @@ import bear from './../bear.jpg'
 import lava from './../lava.jpg'
 import Title from './../Components/Title';
 import ImageGallery from './../Components/ImageGallery';
-import PongGame from '../Components/Pong';
-import TicTacToe from '../Components/TicTacToe';
+import mountain2 from '../images/mountain-2.jpg'
+import spacex from '../images/spacex.jpg'
+import robot from '../images/robit.jpg'
 
 //TODO load this in from somewhere for christs sake
 const images = [
@@ -22,6 +23,20 @@ const images = [
     {
       id: 3,
       url: lava,
+      description: 'Image 3'
+    },   {
+      id: 1,
+      url: mountain2,
+      description: 'Image 1'
+    },
+    {
+      id: 2,
+      url: spacex,
+      description: 'Image 2'
+    },
+    {
+      id: 3,
+      url: robot,
       description: 'Image 3'
     },
   ];

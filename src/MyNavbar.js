@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
@@ -17,7 +17,6 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 export default function MyNavbar() {
     return (
         <div>
-{/* collapseOnSelect expand="lg" bg="dark" variant="dark" */}
             <Navbar key='lg' bg="dark" expand='lg' variant="dark" className="mb-3">
                 <Container fluid>
                     <Navbar.Brand href="/">🏠</Navbar.Brand>
@@ -29,16 +28,16 @@ export default function MyNavbar() {
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
-                                Navigation Menu
+                                Hello, Thanks for visiting🙏 
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <Nav bg="dark" className="justify-content-end flex-grow-1 pe-3">
+                            <Nav  className="justify-content-front flex-grow-1 pe-3">
                                 <Nav.Link href="/">Home🚪</Nav.Link>
                                 <Nav.Link href="/about">About❔</Nav.Link>
                                 <Nav.Link href="/blog">Blog📓</Nav.Link>
                                 <Nav.Link href="/contact-form">Contact✉️</Nav.Link>
-                                <NavDropdown
+                                {/* <NavDropdown
                                     title="Dropdown"
                                     id={`offcanvasNavbarDropdown-expand-lg`}
                                 >
@@ -50,23 +49,12 @@ export default function MyNavbar() {
                                     <NavDropdown.Item href="#action5">
                                         Something else here
                                     </NavDropdown.Item>
-                                </NavDropdown>
+                                </NavDropdown> */}
                             </Nav>
-                            <Form className="d-flex">
-                                <Form.Control
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2"
-                                    aria-label="Search"
-                                />
-                                <Button variant="outline-success">Search</Button>
-                            </Form>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                 </Container>
             </Navbar>
-
-           
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/contact-form' element={<ContactForm />} />

@@ -13,31 +13,31 @@ const images = [
     {
       id: 1,
       url: city,
-      description: 'Image 1'
+      description: 'I generated this image on stabilityai/stable-diffusion'
     },
     {
       id: 2,
       url: bear,
-      description: 'Image 2'
+      description: 'I found on stabilityai/stable-diffusion'
     },
     {
       id: 3,
       url: lava,
-      description: 'Image 3'
+      description: 'I found on stabilityai/stable-diffusion'
     },   {
       id: 1,
       url: mountain2,
-      description: 'Image 1'
+      description: 'ChatGpt generated this image from my prompt'
     },
     {
       id: 2,
       url: spacex,
-      description: 'Image 2'
+      description: 'found on stabilityai/stable-diffusion spacex dragon rocket launch / in the upper atmosphere'
     },
     {
       id: 3,
       url: robot,
-      description: 'Image 3'
+      description: 'I gave chatGPT a promt to create another prompt to generate an image of the robot Bender'
     },
   ];
 

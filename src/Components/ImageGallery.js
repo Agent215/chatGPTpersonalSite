@@ -30,6 +30,7 @@ function ImageGallery(props) {
       {selectedImage && (
         <animated.div className="expanded-image-overlay" style={springProps} onClick={handleClose}>
           <img src={selectedImage.url} alt={selectedImage.description} />
+          <div className="image-description">{selectedImage.description}</div>
         </animated.div>
       )}
     </div>

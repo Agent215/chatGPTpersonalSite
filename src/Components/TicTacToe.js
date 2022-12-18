@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const winningCombinations = [[0, 1, 2],
 [3, 4, 5],
@@ -15,10 +15,17 @@ function TicTacToe() {
     const [currentPlayer, setCurrentPlayer] = useState('X');
     const [gameOver, setGameOver] = useState(false);
     const [winner, setWinner] = useState(null);
+    const [gameOnFlag, setGameOnFlag] = useState(null);
+    const [aiNext, setAiNext] = useState(true);
+
+    useEffect(() => {
+      console.log('render a frame')
+      console.log("current player :" + currentPlayer);
+    }, [aiNext]);
 
     const handleClick = (index, player) => {
-        if (board[index] || gameOver || (player === 'O')) return;
-
+        if (board[index] || gameOver) return;
+        console.log("in handleClick as player :" + currentPlayer)
         const newBoard = [...board];
         newBoard[index] = currentPlayer;
         setBoard(newBoard);
@@ -28,34 +35,43 @@ function TicTacToe() {
             setWinner(currentPlayer);
             return;
         }
-
-        handleX(newBoard);
-    
+        if (currentPlayer === 'X') {
+            console.log("setting player to O");
+            setCurrentPlayer('O');
+            setAiNext(false);
+            console.log("current player :" + currentPlayer);
+            console.log("getting computer move")
+            const computerMove = getComputerMove(board);
+            if (computerMove !== null) {
+                console.log("moving computer")
+                handleClick(computerMove, 'O'); // make the computer's move immediately
+            }
+        } else {
+            console.log("in else setting player to X")
+            setCurrentPlayer('X');
+            setAiNext(true);
+            console.log("current player :" + currentPlayer);
+        }
     };
 
-    const handleX =(board) =>{
-        if (currentPlayer === 'X') {
-            setCurrentPlayer('O');
-            setTimeout(() => {
-                const computerMove = getComputerMove(board);
-                if (computerMove !== null) {
-                    handleClick(computerMove, 'O');
-                }
-            }, 500);
-        } else {
-            setCurrentPlayer('X');
-        }
-    }
+
     const getComputerMove = (board) => {
         const emptySquares = [];
         for (let i = 0; i < board.length; i++) {
             if (!board[i]) {
+                console.log("valid move for computer " + i)
                 emptySquares.push(i);
             }
         }
-        if (emptySquares.length === 0) return null;
+
+        if (emptySquares.length === 0 || currentPlayer !== 'O') {
+            console.log("length is zero or player is wrong")
+            return null;
+        }
+
         return emptySquares[Math.floor(Math.random() * emptySquares.length)];
     };
+
 
     const checkForWin = (board) => {
         for (const combination of winningCombinations) {

@@ -29,8 +29,8 @@ const images = [
 const Home = () => (
   <div style={{paddingLeft:'5%',paddingRight:'5%'}}>
     <Title/>
-    {/* <PongGame/>
-    <TicTacToe/> */}
+    {/* <PongGame/> */}
+    {/* <TicTacToe/> */}
   <ImageGallery images={images} />
   </div>
 );

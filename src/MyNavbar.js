@@ -9,27 +9,64 @@ import About from './Sections/About';
 import Blog from './Components/Blog';
 import ContactForm from './Components/ContactForm';
 import Home from './Sections/Home';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 export default function MyNavbar() {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{ padding: "0", margin: '0' }}>
-                {/* <Navbar.Brand href="/">Brahm Schultz</Navbar.Brand> */}
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/about">About</Nav.Link>
-                        <Nav.Link href="/blog">Blog</Nav.Link>
-                        <Nav.Link href="/contact-form">Contact</Nav.Link>
-                        {/* <NavDropdown title="Contact" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#contact-form">Contact Form</NavDropdown.Item>
-                            <NavDropdown.Item href="#email">Email</NavDropdown.Item>
-                            <NavDropdown.Item href="#phone">Phone</NavDropdown.Item>
-                        </NavDropdown> */}
-                    </Nav>
-                </Navbar.Collapse>
+{/* collapseOnSelect expand="lg" bg="dark" variant="dark" */}
+            <Navbar key='lg' bg="dark" expand='lg' variant="dark" className="mb-3">
+                <Container fluid>
+                    <Navbar.Brand href="/">🏠</Navbar.Brand>
+                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
+                    <Navbar.Offcanvas
+                        id={`offcanvasNavbar-expand-lg`}
+                        aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
+                        placement="end"
+                    >
+                        <Offcanvas.Header closeButton>
+                            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
+                                Navigation Menu
+                            </Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            <Nav bg="dark" className="justify-content-end flex-grow-1 pe-3">
+                                <Nav.Link href="/">Home🚪</Nav.Link>
+                                <Nav.Link href="/about">About❔</Nav.Link>
+                                <Nav.Link href="/blog">Blog📓</Nav.Link>
+                                <Nav.Link href="/contact-form">Contact✉️</Nav.Link>
+                                <NavDropdown
+                                    title="Dropdown"
+                                    id={`offcanvasNavbarDropdown-expand-lg`}
+                                >
+                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">
+                                        Another action
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action5">
+                                        Something else here
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                            </Nav>
+                            <Form className="d-flex">
+                                <Form.Control
+                                    type="search"
+                                    placeholder="Search"
+                                    className="me-2"
+                                    aria-label="Search"
+                                />
+                                <Button variant="outline-success">Search</Button>
+                            </Form>
+                        </Offcanvas.Body>
+                    </Navbar.Offcanvas>
+                </Container>
             </Navbar>
+
+           
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/contact-form' element={<ContactForm />} />

@@ -26,36 +26,6 @@
   }
 }
 
-/* prepare the selectors to add a stroke to */
-.stroke-single,
-.stroke-double {
-  position: relative;
-  background: transparent;
-  z-index: 0;
-  color:white;
-  font-size: 60px;
-  font-family: 'Oswald';
-  margin: 20px 100px ;
-}
-/* add a single stroke */
-.stroke-single:before,
-.stroke-double:before {
-  content: attr(title);
-  position: absolute;
-  -webkit-text-stroke: 0.11em red; 
-  
-  left: 0;
-  z-index: -1;
-}
-/* add a double stroke */
-.stroke-double:after {
-  content: attr(title);
-  position: absolute;
-  -webkit-text-stroke: 0.25em white;
-  left: 0;
-  z-index: -2;
-}
-
 .expanded {
   flex: 0 0 100%;
   max-width: 100%;
@@ -81,24 +51,7 @@
   max-height: 100%;
   z-index: 1;
 }
-/* .square {
-  display: block;
-  width: 100px;
-  height: 100px;
-  border: 1px solid #ccc;
-  font-size: 48px;
-  text-align: center;
-  line-height: 100px;
-}
 
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-.highlight {
-  background-color: yellow;
-} */
 @media (max-width: 800px) {
   .image-description {
     /* apply styles for small screens here */
@@ -126,3 +79,14 @@
     margin-top: 50vh;
   }
 }
+.content-container {
+  min-height: calc(32vh);
+}
+/* .footer--pin {
+  position: relative;
+  left: 0;
+  bottom: 0;
+} */
+/* .App{
+  background-color: black;
+} */

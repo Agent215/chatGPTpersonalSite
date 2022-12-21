@@ -8,10 +8,11 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
+      <Footer className="footer--pin"/>
       <Container  >
         <MatrixBackground />
       </Container>
-      <Footer />
+      
     </div>
   );
 }

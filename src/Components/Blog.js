@@ -5,7 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const Blog = () => {
     return (
-        <Accordion defaultActiveKey={['0']} alwaysOpen>
+        <Accordion defaultActiveKey={['2']} alwaysOpen style={{paddingTop:'10vh',paddingBottom:'10vh'}}>
             <Accordion.Item eventKey="0">
                 <Accordion.Header>12/15/2022</Accordion.Header>
                 <Accordion.Body>

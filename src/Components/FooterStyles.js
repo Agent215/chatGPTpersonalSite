@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const Box = styled.div`
-padding: 60px 0px;
 background: #212529;
-position: relative;
-bottom: 0;
+position:relative;
+left:0;
+bottom:0;
+right:0;
 width: 100%;
-@media (max-width: 1000px) {
-	padding: 70px 30px;
-}
 `;
 
 export const Container = styled.div`
@@ -16,9 +14,12 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	max-width: 1000px;
-	margin: 0 auto;
+    padding-bottom:60px;
+    // position:fixed;
 	/* background: red; */
 `
+
+
 
 export const Column = styled.div`
 display: flex;

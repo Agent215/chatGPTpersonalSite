@@ -1,4 +1,15 @@
 
+
+/*blog style*/
+.title {
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.content {
+  padding:1em;
+}
 /* Image Gallery styles */
 .image-gallery {
   display: flex;
@@ -76,7 +87,7 @@
     color: white;
     background-color: black;
     position: relative;
-    /* margin-top: 50vh; */
+    margin-top: 50vh;
   }
 }
 .content-container {

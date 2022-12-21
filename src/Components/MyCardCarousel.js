@@ -1,8 +1,6 @@
 import React from 'react';
 import { Carousel, Card } from 'react-bootstrap';
-import city from './../city-1.jpg';
-import bear from './../bear.jpg'
-import lava from './../lava.jpg'
+
 
 const MyCardCarousel = () => {
   return (

@@ -9,7 +9,7 @@ function App() {
       <MyNavbar />
       <Footer className="footer--pin"/>
       <Container  >
-        <MatrixBackground />
+        <MatrixBackground timeout={100} />
       </Container>
       
     </div>

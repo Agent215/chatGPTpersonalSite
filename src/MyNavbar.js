@@ -12,8 +12,8 @@ import Home from './Sections/Home';
 import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import stableDiff from './images/stable-diff.png';
-import chatGptMatrix from './images/ChatGptExample1.png';
-import chatGptAccordian from './images/chatGptExample2.png'
+import chatGptMatrix from './images/ChatGptExample1-Copy.png';
+import chatGptAccordian from './images/chatGptExample2-Copy.png'
 
 
 function insertLineBreaks(string) {

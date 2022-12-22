@@ -10,8 +10,8 @@ import Blog from './Components/Blog';
 import ContactForm from './Components/ContactForm';
 import Home from './Sections/Home';
 import Container from 'react-bootstrap/Container';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import stableDiff from './images/stable-diff.png';
+import Offcanvas from 'react-bootstrap/Offcanvas'; 
+import stableDiff from './images/stable-diff-Copy.png';
 import chatGptMatrix from './images/ChatGptExample1-Copy.png';
 import chatGptAccordian from './images/chatGptExample2-Copy.png'
 

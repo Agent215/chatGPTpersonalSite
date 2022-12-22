@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 
 const winningCombinations = [[0, 1, 2],
 [3, 4, 5],
@@ -18,10 +18,10 @@ function TicTacToe() {
     const [gameOnFlag, setGameOnFlag] = useState(null);
     const [aiNext, setAiNext] = useState(true);
 
-    useEffect(() => {
-      console.log('render a frame')
-      console.log("current player :" + currentPlayer);
-    }, [aiNext]);
+    useLayoutEffect(() => {
+        console.log('render a frame')
+        console.log("current player :" + currentPlayer);
+    }, [board]);
 
     const handleClick = (index, player) => {
         if (board[index] || gameOver) return;

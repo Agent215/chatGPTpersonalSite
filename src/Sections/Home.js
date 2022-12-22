@@ -4,6 +4,7 @@ import bear from './../bear.jpg'
 import lava from './../lava.jpg'
 import Title from './../Components/Title';
 import ImageGallery from './../Components/ImageGallery';
+import TicTacToe from '../Components/TicTacToe';
 import mountain2 from '../images/mountain-2.jpg'
 import spacex from '../images/spacex.jpg'
 import robot from '../images/robit.jpg'

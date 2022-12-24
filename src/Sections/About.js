@@ -9,6 +9,7 @@ const About = () => {
           <h2 className="text-white" style ={{textAlign:'center'}}>About the Website💻</h2>
           <p className="text-white"  style ={{textAlign:'center'}}>
             This websites code was written with the help of chatGpt. The art is AI-generated using opensource stable diffusion models.
+            The purpose of this site is to have a place to play around with new web development technologies. 
           </p>
         </Col>
       </Row>

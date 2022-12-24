@@ -4,9 +4,13 @@
 .title {
   text-align: center;
   font-size: 2em;
-  padding: 1em;
+  padding: .5em;
 }
 
+.blog-card {
+  background: rgb(86, 88, 105) !important;
+  color: white;
+}
 .image-caption {
   text-align: left;
   font-size: 0.8em;
@@ -15,7 +19,7 @@
 }
 
 .content {
-  padding:1em;
+  padding:.7em;
 }
 /* Image Gallery styles */
 .image-gallery {
@@ -125,3 +129,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
+
+.social-media{
+padding: 1%;
+margin: 1%;
+
+}
+

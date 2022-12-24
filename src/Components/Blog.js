@@ -7,9 +7,9 @@ const Blog = (props) => {
 
   return (
     <Row>
-      {blogs.map((blog, index) => (
+      {blogs.sort((a, b) => new Date(b.date) - new Date(a.date)).map((blog, index) => (
         <Col xs={12} md={4} key={index}>
-          <Link style={{ textDecoration: 'none', color: 'black' }}  to={`/blog/${blog.id}`}>
+          <Link to={`/blog/${blog.id}`} style={{ textDecoration: 'none' , color: 'black'}}>
             <Card style={{ margin: '1rem' }}>
               <Card.Body>
                 <h5 className="title" style={{ textDecoration: 'none', color: 'black' }}>

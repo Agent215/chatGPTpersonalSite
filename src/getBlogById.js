@@ -2,6 +2,8 @@ import stableDiff from './images/stable-diff-Copy.png';
 import chatGptMatrix from './images/ChatGptExample1-Copy.png';
 import chatGptAccordian from './images/chatGptExample2-Copy.png';
 import { insertLineBreaks } from './insertLineBreaks';
+import chatGptBlog from './images/ChatGptExample3.png'
+// import myBlogs from './myBlogs'
 
 export const getBlogById = (id) => {
     const blogs = [
@@ -33,44 +35,15 @@ export const getBlogById = (id) => {
             id: '3'
         }
         ,
-        {
-            date: '12/17/2022',
-            emoji: '🖌 🔨',
-            title: "Made some more pictures and stuff",
-            content: insertLineBreaks("I recently had the opportunity to talk with an AI assistant named Assistant to create prompts for my latest art project. I was fascinated by the idea of using AI to generate unique and creative ideas for my art, and I was eager to see what kind of results I could achieve.To create the prompts, I asked Assistant to describe various scenes and settings to me, ranging from woodland mountains on a sunny day to old polaroid photographs of fictional characters. With each prompt, I tried to focus on specific details and elements that would inspire my creativity.  Once I had a list of prompts, I used AI software to generate art based on those prompts. The process was fascinating, and I was pleasantly surprised by the results. The AI-generated art had a unique, abstract quality that I found inspiring, and I was able to use it as a starting point for my own creations. I was so happy with the results of this project that I decided to showcase the AI-generated art on my website. However, when it came time to modify the website's navbar to accommodate the new art, I ran into some issues. The AI-generated code was not quite up to par, and I had to spend some time manually adjusting the navbar to get it just right.   Despite the extra work, I am thrilled with the final results of this project. Using AI to generate prompts for my art was a new and exciting experience, and I can't wait to see what other creative projects I can come up with using this approach. If you're interested in seeing the results of this project, be sure to check out my website!"),
-            image: stableDiff,
-            imageCaption: "Screenshot of me using a stable diffusion model with prompts from chatGpt",
-            id: '3'
-        }
-        ,
-        {
-            date: '12/17/2022',
-            emoji: '🖌 🔨',
-            title: "Made some more pictures and stuff",
-            content: insertLineBreaks("I recently had the opportunity to talk with an AI assistant named Assistant to create prompts for my latest art project. I was fascinated by the idea of using AI to generate unique and creative ideas for my art, and I was eager to see what kind of results I could achieve.To create the prompts, I asked Assistant to describe various scenes and settings to me, ranging from woodland mountains on a sunny day to old polaroid photographs of fictional characters. With each prompt, I tried to focus on specific details and elements that would inspire my creativity.  Once I had a list of prompts, I used AI software to generate art based on those prompts. The process was fascinating, and I was pleasantly surprised by the results. The AI-generated art had a unique, abstract quality that I found inspiring, and I was able to use it as a starting point for my own creations. I was so happy with the results of this project that I decided to showcase the AI-generated art on my website. However, when it came time to modify the website's navbar to accommodate the new art, I ran into some issues. The AI-generated code was not quite up to par, and I had to spend some time manually adjusting the navbar to get it just right.   Despite the extra work, I am thrilled with the final results of this project. Using AI to generate prompts for my art was a new and exciting experience, and I can't wait to see what other creative projects I can come up with using this approach. If you're interested in seeing the results of this project, be sure to check out my website!"),
-            image: stableDiff,
-            imageCaption: "Screenshot of me using a stable diffusion model with prompts from chatGpt",
-            id: '3'
-        }
-        ,
-        {
-            date: '12/17/2022',
-            emoji: '🖌 🔨',
-            title: "Made some more pictures and stuff",
-            content: insertLineBreaks("I recently had the opportunity to talk with an AI assistant named Assistant to create prompts for my latest art project. I was fascinated by the idea of using AI to generate unique and creative ideas for my art, and I was eager to see what kind of results I could achieve.To create the prompts, I asked Assistant to describe various scenes and settings to me, ranging from woodland mountains on a sunny day to old polaroid photographs of fictional characters. With each prompt, I tried to focus on specific details and elements that would inspire my creativity.  Once I had a list of prompts, I used AI software to generate art based on those prompts. The process was fascinating, and I was pleasantly surprised by the results. The AI-generated art had a unique, abstract quality that I found inspiring, and I was able to use it as a starting point for my own creations. I was so happy with the results of this project that I decided to showcase the AI-generated art on my website. However, when it came time to modify the website's navbar to accommodate the new art, I ran into some issues. The AI-generated code was not quite up to par, and I had to spend some time manually adjusting the navbar to get it just right.   Despite the extra work, I am thrilled with the final results of this project. Using AI to generate prompts for my art was a new and exciting experience, and I can't wait to see what other creative projects I can come up with using this approach. If you're interested in seeing the results of this project, be sure to check out my website!"),
-            image: stableDiff,
-            imageCaption: "Screenshot of me using a stable diffusion model with prompts from chatGpt",
-            id: '3'
-        },
-        {
-            date: '12/17/2022',
-            emoji: '🖌 🔨',
-            title: "Made some more pictures and stuff",
-            content: insertLineBreaks("I recently had the opportunity to talk with an AI assistant named Assistant to create prompts for my latest art project. I was fascinated by the idea of using AI to generate unique and creative ideas for my art, and I was eager to see what kind of results I could achieve.To create the prompts, I asked Assistant to describe various scenes and settings to me, ranging from woodland mountains on a sunny day to old polaroid photographs of fictional characters. With each prompt, I tried to focus on specific details and elements that would inspire my creativity.  Once I had a list of prompts, I used AI software to generate art based on those prompts. The process was fascinating, and I was pleasantly surprised by the results. The AI-generated art had a unique, abstract quality that I found inspiring, and I was able to use it as a starting point for my own creations. I was so happy with the results of this project that I decided to showcase the AI-generated art on my website. However, when it came time to modify the website's navbar to accommodate the new art, I ran into some issues. The AI-generated code was not quite up to par, and I had to spend some time manually adjusting the navbar to get it just right.   Despite the extra work, I am thrilled with the final results of this project. Using AI to generate prompts for my art was a new and exciting experience, and I can't wait to see what other creative projects I can come up with using this approach. If you're interested in seeing the results of this project, be sure to check out my website!"),
-            image: stableDiff,
-            imageCaption: "Screenshot of me using a stable diffusion model with prompts from chatGpt",
-            id: '3'
-        }
+       {
+        date: '12/24/2022',
+        emoji: ' 🧾🧾🔨⚙️ ',
+        title: "Updating my Blog Section",
+        content: insertLineBreaks("Today, I had a conversation with an AI assistant to update the blog section on my website. The previous design had all the blogs displayed in an accordion, but I wanted to display each blog card in a responsive grid with only the image, date, and title shown. When a user clicks on a card, I wanted it to link to a new page where the blog card component takes up the whole page. The AI assistant provided me with the updated code for the Blog component, which now displays the blog cards in a responsive grid using the Card and Col components from react-bootstrap. Each card has a link to a new page, which is implemented using the Link component from react-router-dom. To display the full content of a blog on the new page, the AI assistant also showed me how to use the getBlogById function to retrieve the specific blog from the blogs array based on the id parameter in the URL. This function can be used in the new BlogCard component to display the full content of the blog.Overall, the AI assistant was very helpful in providing me with the updated code and guidance on how to implement the desired changes to the blog section of my website. With these updates, users can now easily browse and read my blogs in a more visually appealing and user-friendly way."), 
+        image: chatGptBlog,
+        imageCaption: "Me using a stable diffusion model with prompts from chatGpt",
+        id: '4'
+    }
     ];
 
     // Find the blog with the matching id

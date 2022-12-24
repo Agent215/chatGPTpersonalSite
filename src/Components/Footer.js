@@ -41,6 +41,13 @@ const Footer = () => {
                   </span>
                 </i>
               </FooterLink>
+              <FooterLink href="https://github.com/Agent215">
+                <i className="fab fa-youtube">
+                  <span >
+                    Github
+                  </span>
+                </i>
+              </FooterLink>
             </Column>
           </Row>
         </Container>

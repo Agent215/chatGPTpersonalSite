@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
+import { DiscussionEmbed } from 'disqus-react';
+import Disqus from "disqus-react"
 
 const Blog = (props) => {
     const { blogs } = props;
@@ -26,6 +28,10 @@ const Blog = (props) => {
                                         <p key={index}>{paragraph}</p>
                                     ))}
                                 </div>
+                            </Card.Body>
+                            <Card.Body>
+                                <script defer src="https://cdn.commento.io/js/commento.js"></script>
+                                <div id="commento"></div>
                             </Card.Body>
                         </Card>
                     </Accordion.Body>

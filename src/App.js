@@ -3,9 +3,14 @@ import MyNavbar from './MyNavbar';
 import { Container } from 'react-bootstrap';
 import MatrixBackground from './Components/MatrixBackground';
 import Footer from './Components/Footer';
+import { useMedia } from 'react-use';
 function App() {
+
+    // Use the useMedia hook to check if the user has set their device to use a dark color scheme
+    const isDarkMode = useMedia('(prefers-color-scheme: dark)');
+    const style = isDarkMode ? "dark-style" : "light-style";
   return (
-    <div className="App">
+    <div className={style} >
       <MyNavbar />
       <Footer className="footer--pin"/>
       <Container  >

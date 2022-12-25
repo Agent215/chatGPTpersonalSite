@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Container,
@@ -9,9 +9,27 @@ import {
 } from "./FooterStyles.js";
 import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
-
+import { useMedia } from 'react-use';
 const Footer = () => {
+
+  const isDarkMode = useMedia('(prefers-color-scheme: dark)');
+
   const [bgColors, setBgColors] = useState(['white', 'white', 'white', 'white']);
+
+ 
+  useEffect(() => {
+   if(isDarkMode){
+    const newBgColors = bgColors.map((bgColor, i) => {   
+        return "white";
+    });
+    setBgColors(newBgColors)
+   }else{
+    const newBgColors = bgColors.map((bgColor, i) => {   
+      return "black";
+  });  setBgColors(newBgColors)
+   }
+}, [isDarkMode]);
+
 
   const handleMouseEnter = (index) => {
     if (index === 3) {
@@ -45,7 +63,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div>
+      <div className="content-container">
       </div>
       <Box>
         <Container>

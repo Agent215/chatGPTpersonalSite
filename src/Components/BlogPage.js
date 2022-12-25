@@ -9,7 +9,7 @@ const BlogPage = () => {
     const blog = getBlogById(id);
 
   return (
-    <Card style={{margin:'1rem'}}>
+    <Card className='blog-card' style={{margin:'1rem'}}>
       <Card.Header>{blog.emoji}</Card.Header>
       <Card.Body>
         <h5 className="title">{blog.title}</h5>

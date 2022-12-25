@@ -18,26 +18,26 @@ import { myBlogs } from './myBlogs';
 export default function MyNavbar() {
     return (
         <div>
-            <Navbar  bg="dark" expand='md' variant="dark" >
-                <Container fluid>
-                    <Navbar.Brand href="/">🏠</Navbar.Brand>
-                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
+            <Navbar className='my-navbar'  expand='md'    >
+                <Container fluid >
+                    <Navbar.Brand  href="/">🏠</Navbar.Brand>
+                    <Navbar.Toggle   aria-controls={`offcanvasNavbar-expand-md`} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-md`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-md`}
                         placement="end"
                     >
-                        <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
+                        <Offcanvas.Header   className='my-navbar' closeButton>
+                            <Offcanvas.Title   id={`offcanvasNavbarLabel-expand-md`}>
                                 Hello, Thanks for visiting🙏 
                             </Offcanvas.Title>
                         </Offcanvas.Header>
-                        <Offcanvas.Body>
+                        <Offcanvas.Body  className='my-navbar-offcanvas' >
                             <Nav  className="justify-content-front flex-grow-1 pe-3">
-                                <Nav.Link href="/">Home🚪</Nav.Link>
-                                <Nav.Link href="/about">About❔</Nav.Link>
-                                <Nav.Link href="/blog">Blog📓</Nav.Link>
-                                <Nav.Link href="/contact-form">Contact✉️</Nav.Link>
+                                <Nav.Link className='my-navbar-offcanvas' href="/">Home🚪</Nav.Link>
+                                <Nav.Link  className='my-navbar-offcanvas'href="/about">About❔</Nav.Link>
+                                <Nav.Link className='my-navbar-offcanvas' href="/blog">Blog📓</Nav.Link>
+                                <Nav.Link  className='my-navbar-offcanvas'  href="/contact-form">Contact✉️</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

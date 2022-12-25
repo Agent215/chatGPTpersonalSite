@@ -1,12 +1,27 @@
 import styled from 'styled-components';
 
 export const Box = styled.div`
-background: #212529;
-position:relative;
-left:0;
-bottom:0;
-right:0;
-width: 100%;
+
+@media (prefers-color-scheme: dark){
+	background: #212529;
+	position:relative;
+	left:0;
+	bottom:0;
+	right:0;
+	width: 100%;
+	}
+
+	@media (prefers-color-scheme: light){
+
+		background: white;
+		position:relative;
+		color: black
+		left:0;
+		bottom:0;
+		right:0;
+		width: 100%;
+	}
+
 `;
 
 export const Container = styled.div`

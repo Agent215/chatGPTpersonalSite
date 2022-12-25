@@ -12,23 +12,41 @@ import Home from './Sections/Home';
 import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas'; 
 import BlogPage from './Components/BlogPage';
+import { useMedia } from 'react-use';
 import { myBlogs } from './myBlogs';
 
 
+
+
+
 export default function MyNavbar() {
+    const isDarkMode = useMedia('(prefers-color-scheme: dark)');
+    const [theme, setTheme] = useState("white");
+    
+    useEffect(() => {
+        if(isDarkMode){
+       setTheme('white');
+        }else{
+       setTheme('black');
+        }
+     }, [isDarkMode]);
+     
+ 
+ 
     return (
         <div>
             <Navbar className='my-navbar'  expand='md'    >
                 <Container fluid >
-                    <Navbar.Brand  href="/">🏠</Navbar.Brand>
-                    <Navbar.Toggle   aria-controls={`offcanvasNavbar-expand-md`} />
+                    <Navbar.Brand   href="/">🏠</Navbar.Brand>
+                    <Navbar.Toggle style={{backgroundColor:'grey'}}  aria-controls={`offcanvasNavbar-expand-md`}/>
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-md`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-md`}
                         placement="end"
+                
                     >
-                        <Offcanvas.Header   className='my-navbar' closeButton>
-                            <Offcanvas.Title   id={`offcanvasNavbarLabel-expand-md`}>
+                        <Offcanvas.Header   className='my-navbar' closeButton closeVariant={theme}>
+                            <Offcanvas.Title    className='my-navbar' id={`offcanvasNavbarLabel-expand-md`}>
                                 Hello, Thanks for visiting🙏 
                             </Offcanvas.Title>
                         </Offcanvas.Header>

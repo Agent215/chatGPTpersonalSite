@@ -16,7 +16,7 @@ const Blog = (props) => {
                   {blog.title}
                 </h5>
                 {blog.image && (
-                  <Card.Img src={blog.image} />
+                  <Card.Img src={blog.image} alt={blog.imageCaption} />
                 )}
                 <Card.Text className="blog-card" style={{ textDecoration: 'none', paddingTop: '1rem' }}>
                   {blog.date}

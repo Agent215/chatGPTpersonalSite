@@ -188,6 +188,38 @@ margin: 1%;
 
 }
 
+/*code block style*/
+.line-number {
+  display: inline-block;
+  width: 3em;
+  text-align: right;
+  margin-right: 0.5em;
+  color: #aaa;
+}
+
+pre {
+  white-space: pre-wrap;
+  background-color: #f6f8fa;
+  color: black;
+  border-radius: 3px;
+  padding: 1em;
+}
+
+.code-block {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  font-size: 0.8em;
+  padding: 0.5em;
+  cursor: pointer;
+}
 
 
 /* .const-darkStyle {

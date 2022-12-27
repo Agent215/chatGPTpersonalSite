@@ -7,6 +7,7 @@ export function insertLineBreaks(string) {
 
   // Initialize an empty result string
   let result = '';
+  let resultArray =[];
 
   // Iterate over the array of sentences
   for (let i = 0; i < sentences.length; i++) {
@@ -24,7 +25,7 @@ export function insertLineBreaks(string) {
       result += '. ';
     }
   }
-
+  resultArray= result.split('\n');
   // Return the result string
-  return result;
+  return resultArray;
 }

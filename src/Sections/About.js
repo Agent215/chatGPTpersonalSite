@@ -15,7 +15,7 @@ const About = () => {
       </Row>
       <Row>
       <Col>
-          <h3 className="text-white">About Brahm🤓</h3>
+          <h2 className="text-white">About Brahm🤓</h2>
           <p className="text-white">
           Brahm Schultz is a 32 year old software engineer and artist with a passion for creating and problem solving. With a background in computer science, Brahm has a strong foundation in programming and a keen eye for detail. In addition to his technical skills, Brahm is also an artist with a love for visual expression and storytelling. Whether he is developing software or creating art, Brahm is driven by a desire to make a positive impact and bring new ideas to life. In his free time, Brahm enjoys exploring new technologies and techniques, as well as spending time with his friends and family.
           </p>

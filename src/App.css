@@ -149,8 +149,8 @@
   .blog-card .card-img {
     display: block;
     margin: 0 auto;
-    width: 50%;
-    padding: 20px;
+    width: 60%;
+    padding: .5rem;
   }
 }
 
@@ -158,7 +158,7 @@
   .blog-card .card-img {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     padding: .5rem;
   }
 

@@ -102,6 +102,7 @@ export const getBlogById = (id) => {
                 'Below is the final code, including the style.',
                 'Blogpage.js.',
                 {
+                    language:'javascript',
                     code: `
                     import React from 'react';
                     import { Card } from 'react-bootstrap';
@@ -155,6 +156,7 @@ export const getBlogById = (id) => {
               `},
               'CodeBlock.js',
               {
+                language:'javascript',
                 code: `
                 import React, { useRef } from 'react';
 
@@ -192,6 +194,7 @@ export const getBlogById = (id) => {
           `},
           'ImageCaption.js',
           {
+            language:'javascript',
             code: `
             import React from 'react';
             import { Card } from 'react-bootstrap';
@@ -205,6 +208,7 @@ export const getBlogById = (id) => {
       `},
       'App.css',
       {
+        language:'css',
         code: `
      // rest of apps style...
 
@@ -243,7 +247,8 @@ pre {
   `},
 
           'There are a few known issues with this code. If the code block contains escape characters or sequences, they will not be included in the code block. Also, the copy button copies the line numbers as well. These are problems for another time. As they say, "perfect is the enemy of finished."' ,
-              'Code for this can be found here <a href="https://github.com/Agent215/chatGPTpersonalSite/tree/main/src/Components">click here for code</a>.',
+          'Having said all that, I then just googled cool code snippet libraries to use, and I found this one called <a href="https://www.npmjs.com/package/react-code-blocks?activeTab=readme" > react code blocks </a>. So, I tried it out, and I think the results speak for themselves. In this case it looks like human ingenuity has beat out Ai.',
+            'Code for this can be found here <a href="https://github.com/Agent215/chatGPTpersonalSite/tree/main/src/Components">click here for code</a>.',
             ],
             id: '5',
         }

@@ -75,31 +75,31 @@ export const getBlogById = (id) => {
                     imageCaption: 'My initial promt I gave chatGPT included my code I wanted it to alter',
                 },
 
-                "The blog entry are you reading was written by a human, but the code was written by both man and machine. My goal with this entry is to show you the process I went through to update the blog component so that it shows more than one image, and is also able to contain links and code blocks. "
-                +"I began with the following prompt for chatGPT : 'alter the following code so that the blog can contain any arbitrary number of images, and those images can be placed at different places between desired paragraphs of text. I also would like to be able to embed hyperlinks inside some of text blocks. All this should be optional'",
+                "The following blog entry was written by a human, but the code was written by both man and machine. My goal with this entry is to show you the process I went through to update the blog component so that it displays more than one image and can contain links and code blocks.",
+                "I began with the following prompt for chatGpt: 'Alter the following code so that the blog can contain any arbitrary number of images, and those images can be placed at different places between desired paragraphs of text. I also would like to be able to embed hyperlinks inside some of the text blocks. All this should be optional.' ",
                 {
                     image: chatGptBlogResponseOne,
                     imageCaption: 'the initial prompt response from chatGpt incuded a code example using my existing components',
                 },
-                'The reponse it gave seems like a reasonable solution, and we can extend this to have any arbitray component we would want to add to the blog in the future.',
-                'Then i got the below error where my screen would not render.',
+                'The response it gave seemed like a reasonable solution, and we can extend this to have any arbitrary component we would want to add to the blog in the future.',
+                'After trying out the code I got the below error, and my screen would not render.',
                 {
                     image: errorOne,
                     imageCaption: 'The error is hard to read in this image but is : blog.content.map is not a function',
                 },
-                'When I gave the error back to chatGpt, it responsed with the below answer and code',
+                'When I gave the error back to chatGpt, it responded with the following answer and code.',
                 {
                     image: chatGptBlogResponseTwo,
                     imageCaption: 'gpt reponses to me showing it the error',
                 },
                 'This fixed the issue. I asked some more questions to get the style right, and to also fix some bugs.',
-                'Remember how I said we could extend this before? Well lets do that now by asking chatGpt to create a new codeBlock component for us',
+                'Remember how I said we could extend this before? Well, lets do that now by asking chatGpt to create a new code block component for us.',
                 {
                     image: codeBlockPrompt,
                     imageCaption: 'Chatgpt giving my its first attempt at a code block component',
                 },
-                'This was pretty good and worked out the box, but It was not very good looking and there was no button for copying the contents. I asked it to give me a nicer looking style, and to adda copy button. ',
-                'Below is the final code including the style.',
+                `This worked out of the box, but it wasn't very good looking and there was no button for copying the contents. I asked it to give me a nicer looking style and to add a copy button.`,
+                'Below is the final code, including the style.',
                 'Blogpage.js.',
                 {
                     code: `
@@ -242,12 +242,10 @@ pre {
 }
   `},
 
-          'There a few known issues with this code. If the code block contains escape characters or sequences they will not be included in the code block' +
-          '. Also the copy button copies the line numbers as well. These are problems for another time. As they say perfect is the enemy of finished.',
+          'There are a few known issues with this code. If the code block contains escape characters or sequences, they will not be included in the code block. Also, the copy button copies the line numbers as well. These are problems for another time. As they say, "perfect is the enemy of finished."' ,
               'Code for this can be found here <a href="https://github.com/Agent215/chatGPTpersonalSite/tree/main/src/Components">click here for code</a>.',
             ],
-            // content: insertLineBreaks("Today, I had a conversation with an AI assistant to update the blog section on my website. The previous design had all the blogs displayed in an accordion, but I wanted to display each blog card in a responsive grid with only the image, date, and title shown. When a user clicks on a card, I wanted it to link to a new page where the blog card component takes up the whole page. The AI assistant provided me with the updated code for the Blog component, which now displays the blog cards in a responsive grid using the Card and Col components from react-bootstrap. Each card has a link to a new page, which is implemented using the Link component from react-router-dom. To display the full content of a blog on the new page, the AI assistant also showed me how to use the getBlogById function to retrieve the specific blog from the blogs array based on the id parameter in the URL. This function can be used in the new BlogCard component to display the full content of the blog.Overall, the AI assistant was very helpful in providing me with the updated code and guidance on how to implement the desired changes to the blog section of my website. With these updates, users can now easily browse and read my blogs in a more visually appealing and user-friendly way."), 
-            id: '5'
+            id: '5',
         }
     ];
 

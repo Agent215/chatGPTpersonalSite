@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { DiscussionEmbed } from 'disqus-react';
 import { getBlogById } from './../getBlogById';
 import { useParams } from "react-router-dom";
-import { CodeBlock } from './CodeBlock';
+import { MyCodeBlock } from './CodeBlock';
 import { ImageCaption } from './ImageCaption';
 
 
@@ -33,7 +33,8 @@ const BlogPage = () => {
             } else if (typeof element === 'string') {
               return <p key={index}>{element}</p>;
             } else if (element.code) {
-              return <CodeBlock key={index} code={element.code} />;
+                console.log("language is " + element.language);
+              return <MyCodeBlock key={index} code={element.code} language={element.language} />;
             } else {
               return <ImageCaption key={index} image={element.image} imageCaption={element.imageCaption} />;
             }

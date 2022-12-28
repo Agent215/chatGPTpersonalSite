@@ -19,7 +19,7 @@ const BlogPage = () => {
       <Card.Body >
         <h5 className="title">{blog.title}</h5>
         {blog.image && (
-          <Card.Img src={blog.image} className="card-img blog-page-image" />
+          <Card.Img src={blog.image}  />
         )}
         {blog.imageCaption && (
           <Card.Text className="image-caption">{blog.imageCaption}</Card.Text>

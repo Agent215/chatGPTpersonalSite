@@ -58,7 +58,7 @@ export const myBlogs = [
                 image: chatGptBlogQuestion,
                 imageCaption: 'My initial promt I gave chatGPT included my code I wanted it to alter',
             },
-            "The blog entry are you reading was written by a human, but the code was written by both man and machine. My goal with this entry is to show you the process I went through to update the blog component so that it shows more than one image, and is also able to contain links and code blocks. "
+            "The blog you are reading was written by a human, but the code was written by both man and machine. My goal with this entry is to show you the process I went through to update the blog component so that it shows more than one image, and is also able to contain links and code blocks. "
             +"I began with the following prompt for chatGPT : 'alter the following code so that the blog can contain any arbitrary number of images, and those images can be placed at different places between desired paragraphs of text. I also would like to be able to embed hyperlinks inside some of text blocks. All this should be optional'",
             {
                 image: chatGptBlogResponseOne,

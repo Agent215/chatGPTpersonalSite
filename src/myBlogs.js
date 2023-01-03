@@ -7,6 +7,9 @@ import chatGptBlogQuestion from './images/ChatGptQuestion-1.png'
 import chatGptBlogResponseOne from './images/chatGptResponse-2.png'
 import chatGptBlogResponseTwo from './images/chatGptResponse-1.png'
 import errorOne from './images/error.png'
+import code from './images/code.jpg'
+import blog from './images/blog.jpg'
+import girl from './images/girl-celebrates.png'
 import codeBlock from './images/codeBlock.png'
 // import { conversation } from './text';
 
@@ -18,7 +21,7 @@ export const myBlogs = [
         emoji: '👏 😎',
         title: "First Entry",
         content: insertLineBreaks("I created this website with the help of a powerful AI assistant. I asked the assistant a few questions, such as how to create a React blog component using React Bootstrap, and it provided me with clear, concise answers.   I was impressed by the assistants knowledge and ability to generate human-like text on the fly. Its truly amazing what AI can do these days!    Overall, I'm very happy with the results of using AI to help me create this website. It saved me a lot of time and effort, and I'm excited to see what else I can do with it."),
-        image: chatGptMatrix,
+        image: girl,
         imageCaption: "Some of my conversation with ChatGpt when creating the background component",
         id: 1
     },
@@ -45,7 +48,7 @@ export const myBlogs = [
         emoji: ' 🧾🧾🔨⚙️ ',
         title: "Updating my Blog Section",
         content: insertLineBreaks("Today, I had a conversation with an AI assistant to update the blog section on my website. The previous design had all the blogs displayed in an accordion, but I wanted to display each blog card in a responsive grid with only the image, date, and title shown. When a user clicks on a card, I wanted it to link to a new page where the blog card component takes up the whole page. The AI assistant provided me with the updated code for the Blog component, which now displays the blog cards in a responsive grid using the Card and Col components from react-bootstrap. Each card has a link to a new page, which is implemented using the Link component from react-router-dom. To display the full content of a blog on the new page, the AI assistant also showed me how to use the getBlogById function to retrieve the specific blog from the blogs array based on the id parameter in the URL. This function can be used in the new BlogCard component to display the full content of the blog.Overall, the AI assistant was very helpful in providing me with the updated code and guidance on how to implement the desired changes to the blog section of my website. With these updates, users can now easily browse and read my blogs in a more visually appealing and user-friendly way."), 
-        image: chatGptBlog,
+        image: blog,
         imageCaption: "Me using a stable diffusion model with prompts from chatGpt",
         id: 4
     },
@@ -183,7 +186,7 @@ export const myBlogs = [
           'Code for this can be found here <a href="https://github.com/Agent215/chatGPTpersonalSite/tree/main/src/Components">click here for code</a>.',
         ],
         // content: insertLineBreaks("Today, I had a conversation with an AI assistant to update the blog section on my website. The previous design had all the blogs displayed in an accordion, but I wanted to display each blog card in a responsive grid with only the image, date, and title shown. When a user clicks on a card, I wanted it to link to a new page where the blog card component takes up the whole page. The AI assistant provided me with the updated code for the Blog component, which now displays the blog cards in a responsive grid using the Card and Col components from react-bootstrap. Each card has a link to a new page, which is implemented using the Link component from react-router-dom. To display the full content of a blog on the new page, the AI assistant also showed me how to use the getBlogById function to retrieve the specific blog from the blogs array based on the id parameter in the URL. This function can be used in the new BlogCard component to display the full content of the blog.Overall, the AI assistant was very helpful in providing me with the updated code and guidance on how to implement the desired changes to the blog section of my website. With these updates, users can now easily browse and read my blogs in a more visually appealing and user-friendly way."), 
-        image: codeBlock,
+        image: code,
         imageCaption: "Asking ChatGpt for help with my website yet again. I want to add the ability to put hyperlinks and code blocks in my blog. Also having more than one image would be nice. Can it make my blog look legit?",
         id: '5'
     }

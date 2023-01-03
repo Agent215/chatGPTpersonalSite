@@ -1,7 +1,30 @@
 
 
+.home-title {
 
-
+  font-size: 4rem;
+  font-family: Luckiest Guy, cursive;
+  text-align: center;
+  background: linear-gradient(to bottom, white, pink, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  opacity: 0;
+  animation: fade .6s ease-in .15s 1 forwards ;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  -webkit-text-stroke: .1vw black;
+  max-width: 100%
+  
+}
+@keyframes fade{
+0%{
+opacity: 0;
+}
+100%{
+opacity: 1;
+}
+}
 
 @media (prefers-color-scheme: dark){
   /*blog style*/

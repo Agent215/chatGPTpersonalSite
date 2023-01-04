@@ -8,8 +8,10 @@ const About = () => {
         <Col style={{padding:'5vh'}}>
           <h2 className="text-white" style ={{textAlign:'center'}}>About the Website💻</h2>
           <p className="text-white"  style ={{textAlign:'center'}}>
-            This websites code was written with the help of chatGpt. The art is AI-generated using opensource stable diffusion models.
-            The purpose of this site is to have a place to play around with new web development technologies. 
+          This websites code was written with the help of chatGpt. The art is AI-generated using opensource stable diffusion models.
+The front end is built using the React JavaScript framework. The site is hosted using the AWS amplify service. 
+            The purpose of this site is to have a place to play around with new web development technologies.
+
           </p>
         </Col>
       </Row>

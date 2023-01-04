@@ -1,12 +1,10 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import { Link } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import { CardActionArea } from '@mui/material';
 
 
@@ -15,14 +13,10 @@ const Blog = (props) => {
 
     return (
         <div style={{ margin: '0%' }}>
-            <Grid container spacing={3} style={{
-                margin: 0,
-                width: '100%',
-                marginTop:'2rem'
-            }}>
+            <Grid style ={{ padding: '1rem', paddingTop:'2rem'}}container spacing={2}>
                 {blogs.sort((a, b) => new Date(b.date) - new Date(a.date)).map((blog, index) => (
-                    <Grid item xs={12} md={4} key={index}>
-                        <Card className='blog-card' sx={{ maxWidth: 345 }}>
+                    <Grid   item xs={12} md={4} key={index}>
+                        <Card className='blog-card' >
                             <CardActionArea
                                 href={`/blog/${blog.id}`}>
                                 {blog.image && (
@@ -50,14 +44,12 @@ const Blog = (props) => {
                                     </CardContent>
 
                                 </div>
-                            </CardActionArea>
-                            <CardActions>
-                                <Button size="small" color="primary">
-                                    <Link to={`/blog/${blog.id}`} style={{ textDecoration: 'none', color: 'white' }}>
-                                        View
-                                    </Link>
+                                {/* this button wont really do anything, as the user can click anywhere on the card. But this helps if they dont know to click.
+                                hopefully this makes it a more mobile first UX  */}
+                                <Button  variant="contained" size="small" color="success">
+                                   View
                                 </Button>
-                            </CardActions>
+                            </CardActionArea>
                         </Card>
                     </Grid>
                 ))}
